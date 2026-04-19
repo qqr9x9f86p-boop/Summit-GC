@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services — Summit General Contracting</title>
+  <meta name="description" content="Kitchen, bathroom, additions, whole-home remodels, and light commercial — detailed pricing and process." />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: { brand: { DEFAULT: '#0F172A', light: '#1E293B' }, accent: { DEFAULT: '#F59E0B', dark: '#D97706' } },
+        fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+      } },
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>html { scroll-behavior: smooth; } body { font-family: 'Inter', sans-serif; } .nav-blur { backdrop-filter: blur(10px); background-color: rgba(255,255,255,0.95); }</style>
+</head>
+<body class="bg-white text-brand antialiased">
+
+  <!-- NAV (identical to index) -->
+  <header class="fixed top-0 left-0 right-0 z-50 nav-blur border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="/index.html" class="flex items-center gap-2">
+          <div class="w-8 h-8 bg-brand rounded flex items-center justify-center">
+            <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2l8 14H2L10 2z"/></svg>
+          </div>
+          <span class="font-bold text-lg">Summit GC</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+          <a href="/services.html" class="text-accent">Services</a>
+          <a href="/portfolio.html" class="hover:text-accent">Portfolio</a>
+          <a href="/index.html#testimonials" class="hover:text-accent">Reviews</a>
+          <a href="/index.html#quote" class="hover:text-accent">Contact</a>
+        </nav>
+        <div class="flex items-center gap-3">
+          <a href="tel:+15551234567" class="hidden sm:inline-flex text-sm font-semibold hover:text-accent">(555) 123-4567</a>
+          <a href="/index.html#quote" class="inline-flex bg-accent hover:bg-accent-dark text-brand font-semibold px-4 py-2 rounded-lg text-sm">Free Quote</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="pt-32 pb-16 bg-gradient-to-br from-brand to-brand-light text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="text-accent font-semibold text-sm uppercase tracking-wider mb-3">Our Services</p>
+      <h1 class="text-4xl sm:text-5xl font-extrabold mb-4">Everything from one skilled crew</h1>
+      <p class="text-lg text-slate-300 max-w-3xl">Licensed general contractors with in-house framers, finish carpenters, tile setters, and project managers. Below: exactly what we build, how we price it, and what you can expect.</p>
+    </div>
+  </section>
+
+  <!-- SERVICE SECTIONS -->
+  <section class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
+
+      <!-- Kitchen -->
+      <div id="kitchen" class="grid lg:grid-cols-2 gap-10 items-center scroll-mt-24">
+        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=600&fit=crop" class="w-full aspect-[4/3] object-cover rounded-2xl" alt="Kitchen remodel" />
+        <div>
+          <p class="text-accent font-semibold text-sm uppercase tracking-wider mb-2">Kitchen Remodeling</p>
+          <h2 class="text-3xl font-bold mb-4">Kitchens that work as hard as you do</h2>
+          <p class="text-slate-600 mb-6">From cosmetic refreshes to full tear-outs with moved walls. We handle design, cabinetry, countertops, backsplash, flooring, lighting, appliances, and all trades.</p>
+          <div class="grid grid-cols-2 gap-4 mb-6 text-sm">
+            <div class="flex items-start gap-2"><span class="text-accent">✓</span><span>Custom & semi-custom cabinets</span></div>
+            <div class="flex items-start gap-2"><span class="text-accent">✓</span><span>Quartz, granite, butcher block</span></div>
+            <div class="flex items-start gap-2"><span class="text-accent">✓</span><span>Islands & peninsulas</span></div>
+            <div class="flex items-start gap-2"><span class="text-accent">✓</span><span>Electrical + plumbing relocation</span></div>
+          </div>
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 mb-6">
+            <div class="text-xs text-slate-500 font-semibold uppercase tracking-wider">Typical investment</div>
+            <div class="text-2xl font-bold text-brand">$25,000 – $85,000+</div>
+            <div class="text-xs text-slate-500 mt-1">Timeline: 4–8 weeks</div>
+          </div>
+          <a href="/index.html#quote" class="inline-flex items-center gap-2 bg-brand hover:bg-brand-light text-white font-semibold px-6 py-3 rounded-lg transition">Get kitchen quote →</a>
+        </div>
+      </div>
+
+      <!-- Bathroom -->
+      <div id="bathroom" class="grid lg:grid-cols-2 gap-10 items-center scroll-mt-24">
+        <div class="lg:order-2">
+          <img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&h=600&fit=crop" class="w-full aspect-[4/3] object-cover rounded-2xl" alt="Bathroom remodel" />
+        </div>
+        <div class="lg:order-1">
+          <p class="text-accent font-semibold text-sm uppercase tracking-wider mb-2">Bathroom Renovation</p>
+          <h2 class="text-3xl font-bold mb-4">Spa-quality bathrooms, built to last</h2>
+          <p class="text-slate-600 mb-6">Proper waterproofing, code-compliant plumbing, and finishes that stand up to daily use. Every bathroom gets a full waterproofing system — not just cement board.</p>
+          <div class="grid grid-cols-2 gap-4 mb-6 text-sm">
+            <div class="flex items-start gap-2"><span class="text-accent">✓</span><span>Walk-in showers & wet rooms</span></div>
+            <div class="flex items-start gap-2"><span class="text-accent">✓</span><span>Heated tile floors</span></div>
+            <div class="flex items-start gap-2"><span class="text-accent">✓</span><span>Custom vanities & storage</span></div>
+            <div class="flex items-start gap-2"><span class="text-accent">✓</span><span>Aging-in-place features</span></div>
+          </div>
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 mb-6">
+            <div class="text-xs text-slate-500 font-semibold uppercase tracking-wider">Typical investment</div>
+            <div class="text-2xl font-bold text-brand">$15,000 – $45,000</div>
+            <div class="text-xs text-slate-500 mt-1">Timeline: 3–5 weeks</div>
+          </div>
+          <a href="/index.html#quote" class="inline-flex items-center gap-2 bg-brand hover:bg-brand-light text-white font-semibold px-6 py-3 rounded-lg transition">Get bathroom quote →</a>
+        </div>
+      </div>
+
+      <!-- Additions -->
+      <div id="additions" class="grid lg:grid-cols-2 gap-10 items-center scroll-mt-24">
+        <img src="https://images.unsplash.com/photo-1518780664697-55e3ad937233?w=800&h=600&fit=crop" class="w-full aspect-[4/3] object-cover rounded-2xl" alt="Home addition" />
+        <div>
+          <p class="text-accent font-semibold text-sm uppercase tracking-wider mb-2">Home Additions</p>
+          <h2 class="text-3xl font-bold mb-4">More space, seamlessly integrated</h2>
+          <p class="text-slate-600 mb-6">Second stories, master suites, family rooms, sunrooms, in-law units. We handle architectural design, permits, structural engineering, and the full build.</p>
+          <div class="grid grid-cols-2 gap-4 mb-6 text-sm">
+            <div class="flex items-start gap-2"><span class="text-accent">✓</span><span>Design & engineering</span></div>
+            <div class="flex items-start gap-2"><span class="text-accent">✓</span><span>Permit handling</span></div>
+            <div class="flex items-start gap-2"><span class="text-accent">✓</span><span>Foundation & framing</span></div>
+            <div class="flex items-start gap-2"><span class="text-accent">✓</span><span>Matching exterior finishes</span></div>
+          </div>
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 mb-6">
+            <div class="text-xs text-slate-500 font-semibold uppercase tracking-wider">Typical investment</div>
+            <div class="text-2xl font-bold text-brand">$75,000 – $250,000+</div>
+            <div class="text-xs text-slate-500 mt-1">Timeline: 10–20 weeks</div>
+          </div>
+          <a href="/index.html#quote" class="inline-flex items-center gap-2 bg-brand hover:bg-brand-light text-white font-semibold px-6 py-3 rounded-lg transition">Get addition quote →</a>
+        </div>
+      </div>
+
+      <!-- Whole Home -->
+      <div id="whole-home" class="grid lg:grid-cols-2 gap-10 items-center scroll-mt-24">
+        <div class="lg:order-2">
+          <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&h=600&fit=crop" class="w-full aspect-[4/3] object-cover rounded-2xl" alt="Whole home remodel" />
+        </div>
+        <div class="lg:order-1">
+          <p class="text-accent font-semibold text-sm uppercase tracking-wider mb-2">Whole-Home Remodels</p>
+          <h2 class="text-3xl font-bold mb-4">Transform your entire home</h2>
+          <p class="text-slate-600 mb-6">Comprehensive remodels that touch structural, mechanical, and finish work. Perfect for dated homes in great neighborhoods.</p>
+          <div class="grid grid-cols-2 gap-4 mb-6 text-sm">
+            <div class="flex items-start gap-2"><span class="text-accent">✓</span><span>Structural modifications</span></div>
+            <div class="flex items-start gap-2"><span class="text-accent">✓</span><span>Full mechanical upgrades</span></div>
+            <div class="flex items-start gap-2"><span class="text-accent">✓</span><span>Open-concept conversions</span></div>
+            <div class="flex items-start gap-2"><span class="text-accent">✓</span><span>Energy efficiency upgrades</span></div>
+          </div>
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 mb-6">
+            <div class="text-xs text-slate-500 font-semibold uppercase tracking-wider">Typical investment</div>
+            <div class="text-2xl font-bold text-brand">$150,000 – $500,000+</div>
+            <div class="text-xs text-slate-500 mt-1">Timeline: 4–9 months</div>
+          </div>
+          <a href="/index.html#quote" class="inline-flex items-center gap-2 bg-brand hover:bg-brand-light text-white font-semibold px-6 py-3 rounded-lg transition">Get whole-home quote →</a>
+        </div>
+      </div>
+
+      <!-- Commercial -->
+      <div id="commercial" class="grid lg:grid-cols-2 gap-10 items-center scroll-mt-24">
+        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=600&fit=crop" class="w-full aspect-[4/3] object-cover rounded-2xl" alt="Commercial build-out" />
+        <div>
+          <p class="text-accent font-semibold text-sm uppercase tracking-wider mb-2">Light Commercial</p>
+          <h2 class="text-3xl font-bold mb-4">Build-outs that open on schedule</h2>
+          <p class="text-slate-600 mb-6">Restaurants, offices, retail, medical, fitness. We understand commercial code, ADA compliance, and the pressure of a lease-start date.</p>
+          <div class="grid grid-cols-2 gap-4 mb-6 text-sm">
+            <div class="flex items-start gap-2"><span class="text-accent">✓</span><span>Tenant improvements</span></div>
+            <div class="flex items-start gap-2"><span class="text-accent">✓</span><span>ADA compliance</span></div>
+            <div class="flex items-start gap-2"><span class="text-accent">✓</span><span>Code-compliant MEP</span></div>
+            <div class="flex items-start gap-2"><span class="text-accent">✓</span><span>Fast-track scheduling</span></div>
+          </div>
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 mb-6">
+            <div class="text-xs text-slate-500 font-semibold uppercase tracking-wider">Typical investment</div>
+            <div class="text-2xl font-bold text-brand">Quoted per project</div>
+            <div class="text-xs text-slate-500 mt-1">Timeline: varies by scope</div>
+          </div>
+          <a href="/index.html#quote" class="inline-flex items-center gap-2 bg-brand hover:bg-brand-light text-white font-semibold px-6 py-3 rounded-lg transition">Get commercial quote →</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BOTTOM CTA -->
+  <section class="bg-brand text-white py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-4">Ready to get started?</h2>
+      <p class="text-lg text-slate-300 mb-8">Free consultations. Detailed written proposals. No pressure.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/index.html#quote" class="bg-accent hover:bg-accent-dark text-brand font-bold px-8 py-4 rounded-lg text-lg transition">Get Free Quote</a>
+        <a href="tel:+15551234567" class="bg-white/10 hover:bg-white/20 border border-white/30 text-white font-semibold px-8 py-4 rounded-lg text-lg transition">📞 Call (555) 123-4567</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-brand-light text-slate-400 py-8 text-center text-sm border-t border-slate-800">
+    <p>© 2026 Summit General Contracting · Licensed · Bonded · Insured</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio — Summit General Contracting</title>
+  <meta name="description" content="Browse our completed kitchen, bathroom, addition, and commercial remodeling projects." />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: {
+      colors: { brand: { DEFAULT: '#0F172A', light: '#1E293B' }, accent: { DEFAULT: '#F59E0B', dark: '#D97706' } },
+      fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+    } } }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>body { font-family: 'Inter', sans-serif; } .nav-blur { backdrop-filter: blur(10px); background-color: rgba(255,255,255,0.95); }</style>
+</head>
+<body class="bg-white text-brand antialiased">
+
+  <!-- NAV -->
+  <header class="fixed top-0 left-0 right-0 z-50 nav-blur border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="/index.html" class="flex items-center gap-2">
+          <div class="w-8 h-8 bg-brand rounded flex items-center justify-center">
+            <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2l8 14H2L10 2z"/></svg>
+          </div>
+          <span class="font-bold text-lg">Summit GC</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+          <a href="/services.html" class="hover:text-accent">Services</a>
+          <a href="/portfolio.html" class="text-accent">Portfolio</a>
+          <a href="/index.html#testimonials" class="hover:text-accent">Reviews</a>
+          <a href="/index.html#quote" class="hover:text-accent">Contact</a>
+        </nav>
+        <a href="/index.html#quote" class="inline-flex bg-accent hover:bg-accent-dark text-brand font-semibold px-4 py-2 rounded-lg text-sm">Free Quote</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="pt-32 pb-12 bg-gradient-to-br from-brand to-brand-light text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-accent font-semibold text-sm uppercase tracking-wider mb-3">Our Work</p>
+      <h1 class="text-4xl sm:text-5xl font-extrabold mb-4">Built to last. Designed to impress.</h1>
+      <p class="text-lg text-slate-300 max-w-2xl mx-auto">Real projects, real clients, real timelines.</p>
+    </div>
+  </section>
+
+  <!-- FILTERS -->
+  <section class="sticky top-16 z-40 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+      <div class="flex flex-wrap gap-2" id="filters">
+        <button data-filter="all" class="filter-btn active px-4 py-2 rounded-full border text-sm font-medium transition">All Projects</button>
+        <button data-filter="kitchen" class="filter-btn px-4 py-2 rounded-full border text-sm font-medium transition">Kitchen</button>
+        <button data-filter="bathroom" class="filter-btn px-4 py-2 rounded-full border text-sm font-medium transition">Bathroom</button>
+        <button data-filter="addition" class="filter-btn px-4 py-2 rounded-full border text-sm font-medium transition">Additions</button>
+        <button data-filter="whole-home" class="filter-btn px-4 py-2 rounded-full border text-sm font-medium transition">Whole Home</button>
+        <button data-filter="commercial" class="filter-btn px-4 py-2 rounded-full border text-sm font-medium transition">Commercial</button>
+        <button data-filter="exterior" class="filter-btn px-4 py-2 rounded-full border text-sm font-medium transition">Exterior</button>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .filter-btn { border-color: #e2e8f0; color: #475569; }
+    .filter-btn:hover { border-color: #F59E0B; color: #0F172A; }
+    .filter-btn.active { background: #0F172A; color: white; border-color: #0F172A; }
+  </style>
+
+  <!-- GALLERY GRID -->
+  <section class="py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div id="gallery" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    </div>
+  </section>
+
+  <!-- MODAL -->
+  <div id="modal" class="hidden fixed inset-0 z-[60] bg-black/80 backdrop-blur-sm overflow-y-auto">
+    <div class="min-h-screen flex items-center justify-center p-4">
+      <div class="bg-white rounded-2xl max-w-4xl w-full overflow-hidden">
+        <button id="modal-close" class="absolute top-4 right-4 w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-slate-100 z-10">✕</button>
+        <div id="modal-content"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <section class="bg-brand text-white py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold mb-4">Want results like these?</h2>
+      <p class="text-slate-300 mb-6">Tell us about your project — free quote in 60 seconds.</p>
+      <a href="/index.html#quote" class="inline-block bg-accent hover:bg-accent-dark text-brand font-bold px-8 py-4 rounded-lg text-lg">Start Your Project →</a>
+    </div>
+  </section>
+
+  <footer class="bg-brand-light text-slate-400 py-8 text-center text-sm border-t border-slate-800">
+    <p>© 2026 Summit General Contracting · Licensed · Bonded · Insured</p>
+  </footer>
+
+  <script>
+    // Portfolio projects (edit these, swap Unsplash URLs for your real photos)
+    const projects = [
+      { id: 1, title: 'Modern Farmhouse Kitchen', category: 'kitchen', location: 'Suburban Colonial', duration_weeks: 6, budget_range: '$45k–$55k',
+        before_image_url: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=600&fit=crop',
+        after_image_url: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop',
+        description: 'Complete gut remodel. Opened up to dining room, added a 10-foot island, custom white oak shaker cabinets, quartz counters, brass fixtures.' },
+      { id: 2, title: 'Spa Master Bath', category: 'bathroom', location: 'Lake House', duration_weeks: 4, budget_range: '$35k–$40k',
+        before_image_url: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&h=600&fit=crop',
+        after_image_url: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&h=600&fit=crop',
+        description: 'Curbless walk-in shower, heated marble floors, freestanding soaking tub, double vanity with quartz counters, custom lighting.' },
+      { id: 3, title: 'Second-Story Addition', category: 'addition', location: 'Ranch Conversion', duration_weeks: 14, budget_range: '$185k–$220k',
+        before_image_url: 'https://images.unsplash.com/photo-1564078516393-cf04bd966897?w=800&h=600&fit=crop',
+        after_image_url: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&h=600&fit=crop',
+        description: '900 sq ft second story added to a single-level ranch. Two bedrooms, full bath, laundry. Matched existing exterior perfectly.' },
+      { id: 4, title: 'Open-Concept Whole Home', category: 'whole-home', location: '1970s Split-Level', duration_weeks: 22, budget_range: '$280k–$320k',
+        before_image_url: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop',
+        after_image_url: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&h=600&fit=crop',
+        description: 'Removed two load-bearing walls, new kitchen, two baths, flooring throughout, new HVAC, electrical service upgrade.' },
+      { id: 5, title: 'Dental Office Build-Out', category: 'commercial', location: '2,200 sq ft Suite', duration_weeks: 10, budget_range: '$165k–$185k',
+        before_image_url: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=600&fit=crop',
+        after_image_url: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&h=600&fit=crop',
+        description: 'Six operatories, reception, sterilization room. All medical-gas, plumbing, and electrical to spec. Opened on target date.' },
+      { id: 6, title: 'Outdoor Living Space', category: 'exterior', location: 'Backyard Transformation', duration_weeks: 5, budget_range: '$45k–$55k',
+        before_image_url: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop',
+        after_image_url: 'https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=800&h=600&fit=crop',
+        description: 'Composite deck, cedar pergola, built-in grill station with granite counter, landscape lighting, gas fire pit.' },
+      { id: 7, title: 'Chef\'s Kitchen', category: 'kitchen', location: 'Craftsman Revival', duration_weeks: 7, budget_range: '$65k–$75k',
+        before_image_url: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=600&fit=crop',
+        after_image_url: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&h=600&fit=crop',
+        description: 'Professional-grade Wolf range, honed marble counters, custom inset cabinetry, butler\'s pantry with prep sink.' },
+      { id: 8, title: 'Guest Bath Remodel', category: 'bathroom', location: 'Mid-Century Modern', duration_weeks: 3, budget_range: '$18k–$22k',
+        before_image_url: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&h=600&fit=crop',
+        after_image_url: 'https://images.unsplash.com/photo-1620626011761-996317b8d101?w=800&h=600&fit=crop',
+        description: 'Period-appropriate tile, walnut vanity, brass fixtures, refurbished original cast-iron tub.' },
+      { id: 9, title: 'Sunroom Addition', category: 'addition', location: 'Lake-Facing Home', duration_weeks: 8, budget_range: '$85k–$95k',
+        before_image_url: 'https://images.unsplash.com/photo-1564078516393-cf04bd966897?w=800&h=600&fit=crop',
+        after_image_url: 'https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=800&h=600&fit=crop',
+        description: '320 sq ft four-season sunroom with vaulted cedar ceiling, wraparound windows, polished concrete floor with radiant heat.' }
+    ];
+
+    let currentFilter = 'all';
+
+    function render() {
+      const gallery = document.getElementById('gallery');
+      const filtered = currentFilter === 'all' ? projects : projects.filter(p => p.category === currentFilter);
+      gallery.innerHTML = filtered.map((p, i) => `
+        <div class="group cursor-pointer bg-white border border-slate-200 rounded-xl overflow-hidden hover:shadow-xl transition" onclick="openModal(${p.id})">
+          <div class="relative aspect-[4/3] overflow-hidden">
+            <img src="${p.after_image_url}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="${p.title}" />
+            <div class="absolute top-3 left-3 bg-white/95 text-xs font-semibold uppercase tracking-wider px-2.5 py-1 rounded">${p.category.replace('-', ' ')}</div>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-lg mb-1">${p.title}</h3>
+            <p class="text-sm text-slate-500 mb-3">${p.location} · ${p.duration_weeks} weeks</p>
+            <div class="text-sm font-semibold text-accent">${p.budget_range}</div>
+          </div>
+        </div>
+      `).join('') || '<p class="col-span-full text-center text-slate-500 py-20">No projects in this category yet.</p>';
+    }
+
+    function openModal(id) {
+      const p = projects.find(x => x.id === id);
+      if (!p) return;
+      document.getElementById('modal-content').innerHTML = `
+        <div class="grid md:grid-cols-2 gap-0">
+          <div class="relative">
+            <div class="absolute top-3 left-3 bg-red-600 text-white text-xs font-bold uppercase px-2.5 py-1 rounded z-10">Before</div>
+            <img src="${p.before_image_url}" class="w-full h-64 md:h-full object-cover" alt="Before" />
+          </div>
+          <div class="relative">
+            <div class="absolute top-3 left-3 bg-green-600 text-white text-xs font-bold uppercase px-2.5 py-1 rounded z-10">After</div>
+            <img src="${p.after_image_url}" class="w-full h-64 md:h-full object-cover" alt="After" />
+          </div>
+        </div>
+        <div class="p-6 sm:p-8">
+          <div class="text-xs font-semibold uppercase tracking-wider text-accent mb-2">${p.category.replace('-', ' ')}</div>
+          <h2 class="text-2xl sm:text-3xl font-bold mb-3">${p.title}</h2>
+          <div class="flex flex-wrap gap-4 mb-6 text-sm text-slate-600">
+            <div><span class="font-semibold">Location:</span> ${p.location}</div>
+            <div><span class="font-semibold">Timeline:</span> ${p.duration_weeks} weeks</div>
+            <div><span class="font-semibold">Investment:</span> ${p.budget_range}</div>
+          </div>
+          <p class="text-slate-700 leading-relaxed mb-6">${p.description}</p>
+          <a href="/index.html#quote" class="inline-block bg-accent hover:bg-accent-dark text-brand font-bold px-6 py-3 rounded-lg">Get a quote for a similar project →</a>
+        </div>
+      `;
+      document.getElementById('modal').classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    document.getElementById('modal-close').addEventListener('click', () => {
+      document.getElementById('modal').classList.add('hidden');
+      document.body.style.overflow = '';
+    });
+    document.getElementById('modal').addEventListener('click', (e) => {
+      if (e.target.id === 'modal') {
+        document.getElementById('modal').classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+    });
+
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentFilter = btn.dataset.filter;
+        render();
+      });
+    });
+
+    render();
+  </script>
+</body>
+</html>
