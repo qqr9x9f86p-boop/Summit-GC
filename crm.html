@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>M.A.Y.A CRM — Summit GC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="crm.css" />
+  <style>
+    body { font-family: 'Inter', ui-sans-serif, system-ui, sans-serif; }
+  </style>
+</head>
+<body>
+
+<div class="app-shell">
+
+  <!-- ── Top bar ─────────────────────────────────────────── -->
+  <header class="top-bar">
+    <div class="top-bar-brand">
+      <div class="brand-logo">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+          <polyline points="9 22 9 12 15 12 15 22"/>
+        </svg>
+      </div>
+      <div>
+        <div class="brand-name">Summit GC</div>
+        <div class="brand-sub">M.A.Y.A CRM</div>
+      </div>
+    </div>
+
+    <div class="top-bar-right">
+      <a href="index.html" class="back-link">← Back to site</a>
+    </div>
+  </header>
+
+  <!-- ── Sub-nav / View tabs ─────────────────────────────── -->
+  <nav class="sub-nav">
+    <button class="nav-item active" data-view="dashboard">
+      <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/></svg>
+      Dashboard
+    </button>
+    <button class="nav-item" data-view="records">
+      <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      Pipeline
+      <span class="nav-badge hidden" id="badge-new">0</span>
+    </button>
+    <button class="nav-item" data-view="audit">
+      <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+      Audit Log
+    </button>
+  </nav>
+
+  <!-- ── Main content ─────────────────────────────────────── -->
+  <main class="main">
+    <div class="main-head">
+      <h2 id="main-head-title">Dashboard</h2>
+      <div class="view-actions" id="view-actions"></div>
+    </div>
+    <div class="view-root" id="view-root">
+      <!-- Rendered by JS -->
+    </div>
+  </main>
+
+</div>
+
+<!-- Modal root -->
+<div id="modal-root" class="hidden" aria-live="polite"></div>
+
+<!-- Toast root -->
+<div id="toast-root" aria-live="polite" aria-atomic="true"></div>
+
+<script src="crm.js"></script>
+</body>
+</html>
