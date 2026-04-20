@@ -31,13 +31,13 @@ Every page is mobile-first, SEO-ready, and built to convert visitors into calls.
 ### Starter — *"Get Me Online"*
 > Best for contractors who have nothing and need something solid fast.
 
-- ✅ Custom-branded homepage (your colors, logo, photos)
-- ✅ Services page
-- ✅ Contact / quote request form (leads go straight to your email)
-- ✅ Mobile-friendly, fast-loading
-- ✅ Google Maps embed + local SEO metadata
-- ✅ Deployed live with a real domain
-- ✅ Privacy policy + Terms of service
+- Custom-branded homepage (your colors, logo, photos)
+- Services page
+- Contact / quote request form (leads go straight to your email)
+- Mobile-friendly, fast-loading
+- Google Maps embed + local SEO metadata
+- Deployed live with a real domain
+- Privacy policy + Terms of service
 
 ---
 
@@ -45,12 +45,12 @@ Every page is mobile-first, SEO-ready, and built to convert visitors into calls.
 > For contractors ready to run ads and track results.
 
 Everything in Starter, plus:
-- ✅ Dedicated landing page (built for Google/Meta ad traffic)
-- ✅ Portfolio / project gallery with photos
-- ✅ Testimonials section (pull from your Google reviews)
-- ✅ Click-to-call tracking
-- ✅ Google Analytics 4 setup
-- ✅ Basic on-page SEO (title tags, meta, schema markup)
+- Dedicated landing page (built for Google/Meta ad traffic)
+- Portfolio / project gallery with photos
+- Testimonials section (pull from your Google reviews)
+- Click-to-call tracking
+- Google Analytics 4 setup
+- Basic on-page SEO (title tags, meta, schema markup)
 
 ---
 
@@ -58,12 +58,12 @@ Everything in Starter, plus:
 > For contractors who want a full lead machine, not just a website.
 
 Everything in Growth, plus:
-- ✅ CRM integration (leads auto-enter your pipeline)
-- ✅ Automated follow-up emails / SMS when a lead submits
-- ✅ Before/after project showcase with filtering
-- ✅ Review generation flow (prompt happy clients to leave Google reviews)
-- ✅ Multi-location or multi-service pages
-- ✅ Ongoing monthly retainer — updates, new pages, performance reports
+- CRM integration (leads auto-enter your pipeline)
+- Automated follow-up emails / SMS when a lead submits
+- Before/after project showcase with filtering
+- Review generation flow (prompt happy clients to leave Google reviews)
+- Multi-location or multi-service pages
+- Ongoing monthly retainer — updates, new pages, performance reports
 
 ---
 
