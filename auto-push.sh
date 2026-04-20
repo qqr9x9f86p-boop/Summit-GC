@@ -9,7 +9,7 @@ cd "$REPO_DIR" || exit 1
 echo "👀  Watching for changes in SUMMIT GC DEMO... (Ctrl+C to stop)"
 
 while true; do
-  sleep 5
+  sleep 30
 
   # Check if there are any uncommitted changes
   if [ -n "$(git status --short)" ]; then
