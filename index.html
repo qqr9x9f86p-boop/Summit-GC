@@ -16,6 +16,21 @@
   <!-- Favicon -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏗️</text></svg>" />
 
+  <!-- Firebase (writes leads directly to CRM Firestore) -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+  <script>
+    firebase.initializeApp({
+      apiKey:            'AIzaSyAbGIm9GDgoR6QYfKP80JpPUPEZbKaXCzA',
+      authDomain:        'summitcrmdemo.firebaseapp.com',
+      projectId:         'summitcrmdemo',
+      storageBucket:     'summitcrmdemo.firebasestorage.app',
+      messagingSenderId: '973446650978',
+      appId:             '1:973446650978:web:1c8702f7d75ab4824d453b',
+    });
+    window._sgcDb = firebase.firestore();
+  </script>
+
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -557,20 +572,20 @@
       document.getElementById('mobile-menu').classList.toggle('hidden');
     });
 
-    // Quote form — captures lead into CRM inbound queue (localStorage)
+    // Quote form — writes lead directly to Firestore (sgc_records)
     const form    = document.getElementById('quote-form');
     const btn     = document.getElementById('submit-btn');
     const success = document.getElementById('form-success');
 
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
       btn.disabled = true;
       btn.textContent = 'Sending...';
 
-      // Build the lead record
       const data = Object.fromEntries(new FormData(form));
+      const id   = Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
       const lead = {
-        id:          Date.now().toString(36) + Math.random().toString(36).slice(2, 7),
+        id,
         type:        'lead',
         name:        (data.name || '').trim(),
         phone:       (data.phone || '').trim(),
@@ -581,22 +596,19 @@
         status:      'new',
         createdAt:   Date.now(),
         lastMovedAt: Date.now(),
-        activities:  [],
+        activities:  [{ type: 'note', text: 'Inbound lead from website quote form', byName: 'System', at: Date.now() }],
       };
 
-      // Write to CRM inbound queue
       try {
-        const existing = JSON.parse(localStorage.getItem('sgc_inbound_queue') || '[]');
-        existing.push(lead);
-        localStorage.setItem('sgc_inbound_queue', JSON.stringify(existing));
-      } catch (_) { /* storage unavailable — continue anyway */ }
+        await window._sgcDb.collection('sgc_records').doc(id).set(lead);
+      } catch (err) {
+        console.warn('Firestore write failed:', err);
+      }
 
-      setTimeout(() => {
-        success.classList.remove('hidden');
-        form.reset();
-        btn.textContent = 'Sent ✓';
-        success.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }, 600);
+      success.classList.remove('hidden');
+      form.reset();
+      btn.textContent = 'Sent ✓';
+      success.scrollIntoView({ behavior: 'smooth', block: 'center' });
     });
 
     // Testimonial carousel (simple auto-rotate)
