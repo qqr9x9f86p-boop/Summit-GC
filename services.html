@@ -38,8 +38,18 @@
         </nav>
         <div class="flex items-center gap-3">
           <a href="tel:+15551234567" class="hidden sm:inline-flex text-sm font-semibold hover:text-accent">(555) 123-4567</a>
-          <a href="/index.html#quote" class="inline-flex bg-accent hover:bg-accent-dark text-brand font-semibold px-4 py-2 rounded-lg text-sm">Free Quote</a>
+          <a href="/index.html#quote" class="hidden sm:inline-flex bg-accent hover:bg-accent-dark text-brand font-semibold px-4 py-2 rounded-lg text-sm">Free Quote</a>
+          <button id="mobile-toggle" class="md:hidden p-2" aria-label="Menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
         </div>
+      </div>
+      <div id="mobile-menu" class="hidden md:hidden pb-4 space-y-2">
+        <a href="/services.html" class="block py-2 text-sm font-medium text-accent">Services</a>
+        <a href="/portfolio.html" class="block py-2 text-sm font-medium">Portfolio</a>
+        <a href="/index.html#testimonials" class="block py-2 text-sm font-medium">Reviews</a>
+        <a href="/index.html#quote" class="block py-2 text-sm font-medium">Contact</a>
+        <a href="tel:+15551234567" class="block py-2 text-sm font-semibold text-accent">📞 (555) 123-4567</a>
       </div>
     </div>
   </header>
@@ -171,6 +181,28 @@
         </div>
       </div>
 
+      <!-- Exterior -->
+      <div id="exterior" class="grid lg:grid-cols-2 gap-10 items-center scroll-mt-24">
+        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop" class="w-full aspect-[4/3] object-cover rounded-2xl" alt="Exterior and outdoor" />
+        <div>
+          <p class="text-accent font-semibold text-sm uppercase tracking-wider mb-2">Exterior &amp; Outdoor</p>
+          <h2 class="text-3xl font-bold mb-4">Curb appeal and outdoor living, built to last</h2>
+          <p class="text-slate-600 mb-6">First impressions matter — and outdoor living space adds real value. We design and build decks, pergolas, outdoor kitchens, siding replacements, window packages, and complete exterior facelifts. Every project is permitted, code-compliant, and built to outlast the elements.</p>
+          <div class="grid grid-cols-2 gap-4 mb-6 text-sm">
+            <div class="flex items-start gap-2"><span class="text-accent">✓</span><span>Composite &amp; hardwood decks</span></div>
+            <div class="flex items-start gap-2"><span class="text-accent">✓</span><span>Pergolas &amp; shade structures</span></div>
+            <div class="flex items-start gap-2"><span class="text-accent">✓</span><span>Outdoor kitchens &amp; fire features</span></div>
+            <div class="flex items-start gap-2"><span class="text-accent">✓</span><span>Siding, windows &amp; entry doors</span></div>
+          </div>
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 mb-6">
+            <div class="text-xs text-slate-500 font-semibold uppercase tracking-wider">Typical investment</div>
+            <div class="text-2xl font-bold text-brand">$8,000 – $80,000+</div>
+            <div class="text-xs text-slate-500 mt-1">Timeline: 1–6 weeks depending on scope</div>
+          </div>
+          <a href="/index.html#quote" class="inline-flex items-center gap-2 bg-brand hover:bg-brand-light text-white font-semibold px-6 py-3 rounded-lg transition">Get exterior quote →</a>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -186,8 +218,59 @@
     </div>
   </section>
 
-  <footer class="bg-brand-light text-slate-400 py-8 text-center text-sm border-t border-slate-800">
-    <p>© 2026 Summit General Contracting · Licensed · Bonded · Insured</p>
+  <footer class="bg-brand text-slate-300 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-8 mb-8">
+        <div>
+          <div class="flex items-center gap-2 mb-4">
+            <div class="w-8 h-8 bg-accent rounded flex items-center justify-center">
+              <svg class="w-5 h-5 text-brand" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2l8 14H2L10 2z"/></svg>
+            </div>
+            <span class="font-bold text-white text-lg">Summit GC</span>
+          </div>
+          <p class="text-sm leading-relaxed">Licensed, bonded, and insured general contractors building quality remodels, additions, and light commercial projects.</p>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-3 text-sm uppercase tracking-wider">Services</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="/services.html#kitchen" class="hover:text-accent">Kitchen Remodeling</a></li>
+            <li><a href="/services.html#bathroom" class="hover:text-accent">Bathroom Renovation</a></li>
+            <li><a href="/services.html#additions" class="hover:text-accent">Home Additions</a></li>
+            <li><a href="/services.html#exterior" class="hover:text-accent">Exterior &amp; Outdoor</a></li>
+            <li><a href="/services.html#commercial" class="hover:text-accent">Commercial Build-Outs</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-3 text-sm uppercase tracking-wider">Company</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="/portfolio.html" class="hover:text-accent">Portfolio</a></li>
+            <li><a href="/index.html#testimonials" class="hover:text-accent">Reviews</a></li>
+            <li><a href="/index.html#quote" class="hover:text-accent">Free Quote</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-3 text-sm uppercase tracking-wider">Contact</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="tel:+15551234567" class="hover:text-accent">📞 (555) 123-4567</a></li>
+            <li><a href="mailto:info@summitgc.example" class="hover:text-accent">✉️ info@summitgc.example</a></li>
+            <li class="text-slate-400">Licensed in multiple states<br/>Lic. # 0000000</li>
+          </ul>
+        </div>
+      </div>
+      <div class="pt-8 border-t border-slate-700 flex flex-col sm:flex-row justify-between gap-4 text-sm text-slate-400">
+        <p>© 2026 Summit General Contracting. All rights reserved.</p>
+        <div class="flex gap-6">
+          <a href="/privacy.html" class="hover:text-accent">Privacy</a>
+          <a href="/terms.html" class="hover:text-accent">Terms</a>
+        </div>
+      </div>
+    </div>
   </footer>
+
+  <script>
+    document.getElementById('mobile-toggle').addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  </script>
 </body>
 </html>
