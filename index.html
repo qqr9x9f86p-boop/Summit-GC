@@ -91,6 +91,7 @@
           <a href="portfolio.html" class="hover:text-accent transition">Portfolio</a>
           <a href="#testimonials" class="hover:text-accent transition">Reviews</a>
           <a href="#quote" class="hover:text-accent transition">Contact</a>
+          <a href="crm.html" class="hover:text-accent transition text-accent font-semibold">CRM</a>
         </nav>
 
         <div class="flex items-center gap-3">
@@ -557,16 +558,9 @@
       document.getElementById('mobile-menu').classList.toggle('hidden');
     });
 
-    // Quote form — DEMO MODE
-    // -------------------------------------------------------------
-    // Shows a success message on submit. No backend wired up.
-    // When you're ready for real lead capture, the easiest path is:
-    //   1. Create a free form endpoint at https://formspree.io
-    //   2. Add  action="YOUR-FORMSPREE-URL"  method="POST"  to the <form> tag
-    //   3. Delete this script block — Formspree handles the rest
-    // -------------------------------------------------------------
-    const form = document.getElementById('quote-form');
-    const btn = document.getElementById('submit-btn');
+    // Quote form — captures lead into CRM inbound queue (localStorage)
+    const form    = document.getElementById('quote-form');
+    const btn     = document.getElementById('submit-btn');
     const success = document.getElementById('form-success');
 
     form.addEventListener('submit', (e) => {
@@ -574,7 +568,30 @@
       btn.disabled = true;
       btn.textContent = 'Sending...';
 
-      // Simulated send (demo only)
+      // Build the lead record
+      const data = Object.fromEntries(new FormData(form));
+      const lead = {
+        id:          Date.now().toString(36) + Math.random().toString(36).slice(2, 7),
+        type:        'lead',
+        name:        (data.name || '').trim(),
+        phone:       (data.phone || '').trim(),
+        email:       (data.email || '').trim(),
+        service:     data.project_type || '',
+        timeline:    data.timeline || '',
+        notes:       (data.message || '').trim(),
+        status:      'new',
+        createdAt:   Date.now(),
+        lastMovedAt: Date.now(),
+        activities:  [],
+      };
+
+      // Write to CRM inbound queue
+      try {
+        const existing = JSON.parse(localStorage.getItem('sgc_inbound_queue') || '[]');
+        existing.push(lead);
+        localStorage.setItem('sgc_inbound_queue', JSON.stringify(existing));
+      } catch (_) { /* storage unavailable — continue anyway */ }
+
       setTimeout(() => {
         success.classList.remove('hidden');
         form.reset();
