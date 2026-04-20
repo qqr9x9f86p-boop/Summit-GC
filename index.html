@@ -390,101 +390,112 @@
     </div>
   </section>
 
-  <!-- ============ QUOTE FORM ============ -->
-  <section id="quote" class="py-20 bg-gradient-to-br from-slate-50 to-white">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-10">
-        <p class="text-accent font-semibold text-sm uppercase tracking-wider mb-3">Get Started</p>
-        <h2 class="text-3xl sm:text-4xl font-bold mb-4">Get Your Free Quote in 60 Seconds</h2>
-        <p class="text-lg text-slate-600">Tell us about your project. We'll reach out within one business day.</p>
-      </div>
-
-      <form id="quote-form" class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 shadow-lg space-y-5">
-        <div class="grid sm:grid-cols-2 gap-4">
-          <div>
-            <label class="block text-sm font-semibold mb-1.5">Full Name *</label>
-            <input type="text" name="name" required class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent outline-none transition" placeholder="John Smith" />
-          </div>
-          <div>
-            <label class="block text-sm font-semibold mb-1.5">Phone *</label>
-            <input type="tel" name="phone" required class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent outline-none transition" placeholder="(555) 123-4567" />
-          </div>
-        </div>
-
-        <div>
-          <label class="block text-sm font-semibold mb-1.5">Email *</label>
-          <input type="email" name="email" required class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent outline-none transition" placeholder="you@example.com" />
-        </div>
-
-        <div class="grid sm:grid-cols-2 gap-4">
-          <div>
-            <label class="block text-sm font-semibold mb-1.5">Project Type *</label>
-            <select name="project_type" required class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent outline-none transition bg-white">
-              <option value="">Select...</option>
-              <option>Kitchen Remodel</option>
-              <option>Bathroom Renovation</option>
-              <option>Home Addition</option>
-              <option>Whole-Home Remodel</option>
-              <option>Light Commercial</option>
-              <option>Exterior / Outdoor</option>
-              <option>Other</option>
-            </select>
-          </div>
-          <div>
-            <label class="block text-sm font-semibold mb-1.5">Timeline</label>
-            <select name="timeline" class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent outline-none transition bg-white">
-              <option value="">Select...</option>
-              <option>ASAP (within 30 days)</option>
-              <option>1-3 months</option>
-              <option>3-6 months</option>
-              <option>6+ months / planning</option>
-            </select>
-          </div>
-        </div>
-
-        <div>
-          <label class="block text-sm font-semibold mb-1.5">Tell us about your project <span class="text-slate-400 font-normal">(optional)</span></label>
-          <textarea name="message" rows="3" class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent outline-none transition" placeholder="Rough square footage, budget range, specific goals..."></textarea>
-        </div>
-
-        <button type="submit" id="submit-btn" class="w-full bg-accent hover:bg-accent-dark text-brand font-bold py-4 rounded-lg text-lg transition shadow-lg hover:shadow-xl disabled:opacity-60 disabled:cursor-not-allowed">
-          Get My Free Quote →
-        </button>
-
-        <p class="text-xs text-center text-slate-500">🔒 Your info is private. No spam, no resale. We'll only use it to contact you about your project.</p>
-
-        <div id="form-success" class="hidden bg-green-50 border border-green-200 text-green-800 px-4 py-3 rounded-lg text-sm">
-          ✅ Thanks — we got your request. We'll be in touch within one business day.
-        </div>
-      </form>
-    </div>
-  </section>
-
-  <!-- ============ MAP ============ -->
-  <section class="py-16 bg-slate-50 border-t border-slate-200">
+  <!-- ============ QUOTE + MAP ============ -->
+  <section id="quote" class="py-20 bg-gradient-to-br from-slate-50 to-white border-t border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+      <div class="grid lg:grid-cols-2 gap-12 items-start">
+
+        <!-- LEFT: Map + Business Info -->
         <div>
           <p class="text-accent font-semibold text-sm uppercase tracking-wider mb-2">Our location</p>
-          <h2 class="text-2xl sm:text-3xl font-bold">Serving the greater metro area</h2>
+          <h2 class="text-3xl sm:text-4xl font-bold mb-2">Serving the greater metro area</h2>
+          <p class="text-slate-600 mb-6">We work with homeowners and businesses across the region. Come visit or give us a call.</p>
+
+          <div class="flex flex-col sm:flex-row sm:items-center gap-6 mb-6">
+            <div class="text-sm text-slate-600 space-y-1">
+              <p class="font-bold text-brand text-base">Summit General Contracting</p>
+              <p>123 Main St, Your City, ST 00000</p>
+              <a href="tel:+15551234567" class="text-accent font-semibold hover:underline block">(555) 123-4567</a>
+              <a href="mailto:info@summitgc.example" class="text-accent font-semibold hover:underline block">info@summitgc.example</a>
+            </div>
+            <div class="text-sm text-slate-600 space-y-1">
+              <p class="font-bold text-brand text-base">Hours</p>
+              <p>Mon – Fri: 7:00 AM – 6:00 PM</p>
+              <p>Sat: 8:00 AM – 2:00 PM</p>
+              <p>Sun: Closed</p>
+            </div>
+          </div>
+
+          <div class="rounded-2xl overflow-hidden shadow-lg border border-slate-200">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.086!2d-122.4194!3d37.7749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDQ2JzI5LjYiTiAxMjLCsDI1JzA5LjkiVw!5e0!3m2!1sen!2sus!4v1700000000000"
+              width="100%"
+              height="360"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Summit General Contracting location"
+            ></iframe>
+          </div>
         </div>
-        <div class="text-sm text-slate-600">
-          <p class="font-semibold text-brand">Summit General Contracting</p>
-          <p>123 Main St, Your City, ST 00000</p>
-          <a href="tel:+15551234567" class="text-accent font-semibold hover:underline">(555) 123-4567</a>
+
+        <!-- RIGHT: Quote Form -->
+        <div>
+          <p class="text-accent font-semibold text-sm uppercase tracking-wider mb-2">Get Started</p>
+          <h2 class="text-3xl sm:text-4xl font-bold mb-2">Get Your Free Quote in 60 Seconds</h2>
+          <p class="text-slate-600 mb-6">Tell us about your project. We'll reach out within one business day.</p>
+
+          <form id="quote-form" class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 shadow-lg space-y-5">
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-sm font-semibold mb-1.5">Full Name *</label>
+                <input type="text" name="name" required class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent outline-none transition" placeholder="John Smith" />
+              </div>
+              <div>
+                <label class="block text-sm font-semibold mb-1.5">Phone *</label>
+                <input type="tel" name="phone" required class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent outline-none transition" placeholder="(555) 123-4567" />
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-sm font-semibold mb-1.5">Email *</label>
+              <input type="email" name="email" required class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent outline-none transition" placeholder="you@example.com" />
+            </div>
+
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-sm font-semibold mb-1.5">Project Type *</label>
+                <select name="project_type" required class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent outline-none transition bg-white">
+                  <option value="">Select...</option>
+                  <option>Kitchen Remodel</option>
+                  <option>Bathroom Renovation</option>
+                  <option>Home Addition</option>
+                  <option>Whole-Home Remodel</option>
+                  <option>Light Commercial</option>
+                  <option>Exterior / Outdoor</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-sm font-semibold mb-1.5">Timeline</label>
+                <select name="timeline" class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent outline-none transition bg-white">
+                  <option value="">Select...</option>
+                  <option>ASAP (within 30 days)</option>
+                  <option>1-3 months</option>
+                  <option>3-6 months</option>
+                  <option>6+ months / planning</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-sm font-semibold mb-1.5">Tell us about your project <span class="text-slate-400 font-normal">(optional)</span></label>
+              <textarea name="message" rows="3" class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent outline-none transition" placeholder="Rough square footage, budget range, specific goals..."></textarea>
+            </div>
+
+            <button type="submit" id="submit-btn" class="w-full bg-accent hover:bg-accent-dark text-brand font-bold py-4 rounded-lg text-lg transition shadow-lg hover:shadow-xl disabled:opacity-60 disabled:cursor-not-allowed">
+              Get My Free Quote →
+            </button>
+
+            <p class="text-xs text-center text-slate-500">Your info is private. No spam, no resale. We'll only use it to contact you about your project.</p>
+
+            <div id="form-success" class="hidden bg-green-50 border border-green-200 text-green-800 px-4 py-3 rounded-lg text-sm">
+              Thanks — we got your request. We'll be in touch within one business day.
+            </div>
+          </form>
         </div>
-      </div>
-      <div class="rounded-2xl overflow-hidden shadow-lg border border-slate-200">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.086!2d-122.4194!3d37.7749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDQ2JzI5LjYiTiAxMjLCsDI1JzA5LjkiVw!5e0!3m2!1sen!2sus!4v1700000000000"
-          width="100%"
-          height="380"
-          style="border:0;"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          title="Summit General Contracting location"
-        ></iframe>
+
       </div>
     </div>
   </section>
