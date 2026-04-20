@@ -1,74 +1,97 @@
-# Summit General Contracting — Demo Site
+# 🏗️ Summit GC — Demo Site by Ali Amiri
 
-A polished static marketing site. No database, no login, no build step. Open `index.html` in a browser and it just works.
+> **This is a sales demo playground.** It's built to show general contractors exactly what a professional web presence looks like — and what they're leaving on the table without one.
+
+If you're on a sales call looking at this repo: **this is your website, built the way it should be.** Branded to you, converting leads, running 24/7.
+
+**Ali Amiri — Web & Digital Strategy for Contractors**
+📧 [2200ent@proton.me](mailto:2200ent@proton.me)
 
 ---
 
-## What's Here
+## What You're Looking At
+
+A full, production-grade contractor website — no templates, no page builders, no monthly subscription garbage. Custom built, fast, and yours.
 
 ```
-summit/
-├── index.html       # Landing page
-├── services.html    # Services + pricing
-├── portfolio.html   # Filterable project gallery with before/after modal
-└── README.md
+├── index.html        # Main site — hero, services, testimonials, quote form
+├── services.html     # Services breakdown with descriptions
+├── portfolio.html    # Project gallery
+├── landing.html      # Dedicated lead-capture landing page (great for ads)
+├── privacy.html      # Privacy policy
+└── terms.html        # Terms of service
 ```
 
----
-
-## Deploy to Vercel in 3 Minutes
-
-1. **GitHub:** go to [github.com/new](https://github.com/new), create a new public repo (e.g. `summit-gc`)
-2. On the empty repo page, click **"uploading an existing file"** → drag all the files from the `summit` folder in → scroll down, click **Commit changes**
-3. **Vercel:** go to [vercel.com/new](https://vercel.com/new), sign in with GitHub, pick your repo, click **Deploy**
-
-You'll get a live URL like `summit-gc.vercel.app` in under a minute. Every time you push changes to GitHub, Vercel auto-deploys.
-
-> Tip: to preview locally first, just double-click `index.html` — it opens in your browser and works identically.
+Every page is mobile-first, SEO-ready, and built to convert visitors into calls.
 
 ---
 
-## What to Customize
+## What's Included — By Package
 
-Find-and-replace across the three HTML files:
+### Starter — *"Get Me Online"*
+> Best for contractors who have nothing and need something solid fast.
 
-| Placeholder | Where to find it |
-|---|---|
-| `(555) 123-4567` / `5551234567` | Phone number — update in nav, hero, footer |
-| `info@summitgc.example` | Email address |
-| `123 Main St`, `Your City`, `ST` | Physical address (in the JSON-LD block at the top of `index.html`) |
-| `Lic. # 0000000` | License number in footer |
-| `4.9★` / `127` reviews | Hero trust bar + JSON-LD (if you want real numbers) |
-| Hero background image | `.hero-bg` CSS in `index.html` — swap the Unsplash URL |
-| Portfolio photos + copy | `portfolio.html` — the `projects` array near the bottom |
-| Testimonials | `index.html` — the 4 testimonial cards in the `#testimonials` section |
-| Brand colors | `tailwind.config` block at the top of each file — `brand` (navy) + `accent` (amber) |
+- ✅ Custom-branded homepage (your colors, logo, photos)
+- ✅ Services page
+- ✅ Contact / quote request form (leads go straight to your email)
+- ✅ Mobile-friendly, fast-loading
+- ✅ Google Maps embed + local SEO metadata
+- ✅ Deployed live with a real domain
+- ✅ Privacy policy + Terms of service
 
 ---
 
-## About the Quote Form
+### Growth — *"I Want More Leads"*
+> For contractors ready to run ads and track results.
 
-The form is in **demo mode** — it shows a success message but doesn't actually send anything anywhere. That's fine for showing off the site.
-
-When you're ready for real leads, the easiest wire-up is [Formspree](https://formspree.io) (free tier: 50 submissions/month, emails leads directly to you):
-
-1. Sign up at formspree.io, create a form, copy the endpoint URL
-2. In `index.html`, find `<form id="quote-form"` and change it to:
-   ```html
-   <form id="quote-form" action="https://formspree.io/f/YOUR-ID" method="POST" ...>
-   ```
-3. Delete the `<script>` block at the bottom of `index.html` that handles form submission
-4. That's it — Formspree handles everything and emails you each lead
-
-Other options: [Web3Forms](https://web3forms.com), [Getform](https://getform.io), [Netlify Forms](https://docs.netlify.com/forms/setup/) (free if you deploy on Netlify instead of Vercel).
+Everything in Starter, plus:
+- ✅ Dedicated landing page (built for Google/Meta ad traffic)
+- ✅ Portfolio / project gallery with photos
+- ✅ Testimonials section (pull from your Google reviews)
+- ✅ Click-to-call tracking
+- ✅ Google Analytics 4 setup
+- ✅ Basic on-page SEO (title tags, meta, schema markup)
 
 ---
 
-## Notes
+### Pro — *"Build Me a Real System"*
+> For contractors who want a full lead machine, not just a website.
 
-- Placeholder phone numbers use `555-xxxx` format (reserved, not in service).
-- Unsplash images are hotlinked and free. For production, download them or use your own.
-- Tailwind is loaded via CDN — simple and works, but the CSS file is ~3MB. If site speed becomes a concern later, swap to the [Tailwind standalone CLI](https://tailwindcss.com/blog/standalone-cli) for a tiny compiled file.
+Everything in Growth, plus:
+- ✅ CRM integration (leads auto-enter your pipeline)
+- ✅ Automated follow-up emails / SMS when a lead submits
+- ✅ Before/after project showcase with filtering
+- ✅ Review generation flow (prompt happy clients to leave Google reviews)
+- ✅ Multi-location or multi-service pages
+- ✅ Ongoing monthly retainer — updates, new pages, performance reports
 
-That's it. Have fun.
-# Auto-push enabled Sun Apr 19 20:03:08 EDT 2026
+---
+
+## Why This Beats What You Have Now
+
+Most contractor sites are built on overpriced page builders (Wix, Squarespace, GoDaddy) that load slow, look generic, and hand your leads to a middleman.
+
+This is:
+- **Faster** — no bloated builder overhead
+- **Yours** — you own the code, the domain, everything
+- **Built to convert** — every section, headline, and CTA has a job to do
+- **CRM-ready** — when you're ready to scale, the infrastructure is already there
+
+---
+
+## For the Demo
+
+The quote form is in demo mode — submissions don't go anywhere. In a real build, leads route directly to your email or CRM the second someone hits submit.
+
+Colors, photos, copy, phone numbers, and logo are all placeholders. Your version gets built around your brand.
+
+---
+
+## Let's Talk
+
+If you're a general contractor and this is the kind of online presence you want:
+
+📧 **[2200ent@proton.me](mailto:2200ent@proton.me)**
+
+No agency fluff. No upsells you don't need. Just a clean system that gets your phone ringing.
+
